@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login & Registration</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: rgb(36, 115, 158);
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #333;
+            float: left;
+            color: white;
+        }
+
+        .sidebar h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+        }
+
+        .main {
+            margin-left: 200px;
+            padding-top: 100px;
+            text-align: center;
+        
+        }
+
+        .box {
+            width: 300px;
+            margin: auto;
+            border: 1px solid #31267b;
+            padding: 20px;
+            display: none;
+            background-color: rgba(221, 200, 200, 0.881);
+            border-radius: 5px;
+        }
+
+        #login {
+            display: block;
+        }
+
+
+        #login:target,
+        #register:target {
+            display: block;
+        }
+
+
+        #register:target ~ #login {
+            display: none;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 95%;
+            padding: 8px;
+            background: #333;
+            color: white;
+            border: none;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h1>TechFlow</h1>
+    <a href="#login">Login</a>
+    <a href="#register">Registration</a>
+</div>
+
+<div class="main">
+
+    <div class="box" id="register">
+        <h2>Create Account</h2>
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <select>
+                <option>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <button>Register</button>
+        </form>
+    </div>
+
+    <div class="box" id="login">
+        <h2>Login</h2>
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign In</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
